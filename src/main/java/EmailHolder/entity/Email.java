@@ -6,8 +6,8 @@ public class Email {
 
     String email;
     String password;
-    List<String> listOfSitesUsed;
     String description;
+    List<String> listOfSitesUsed;
 
     public Email() {
     }
