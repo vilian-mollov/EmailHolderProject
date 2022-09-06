@@ -6,12 +6,12 @@
 
     <groupId>org.example</groupId>
     <artifactId>PlayGroundProject</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>phonebook</name>
-    <description>Basic web project. This is a email holder. It stores your emails,passwords and other information.
-        It also can stored more specific information about email usage and description.</description>
+    <description>Basic web project. This is an email holder. It stores your emails,passwords and other information.
+        It  can also be stored more specific information about email usage and description.</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -20,10 +20,8 @@
     </parent>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-        <!--    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-                <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding> -->
+       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>11</java.version>
     </properties>
 
