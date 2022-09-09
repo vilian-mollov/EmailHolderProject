@@ -32,6 +32,7 @@ public class Email {
         return listOfSitesUsed;
     }
 
+
     public void setListOfSitesUsed(List<String> listOfSitesUsed) {
         this.listOfSitesUsed = listOfSitesUsed;
     }
@@ -43,4 +44,6 @@ public class Email {
     public void setDescription(String description) {
         this.description = description;
     }
+
+
 }

@@ -6,6 +6,45 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link th:href="@{css/bootstrap.css}" rel="stylesheet"/>
+
+    <style>
+        .dropbtn {
+            background-color: #e95420;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #ddd;}
+
+        .dropdown:hover .dropdown-content {display: block;}
+
+        .dropdown:hover .dropbtn {background-color: #555555;}
+    </style>
+
+
 </head>
 
 <body>
@@ -32,13 +71,26 @@
         <thead>
         <tr>
             <th scope="col">Email</th>
-            <th scope="col">Passwords</th>
+            <th scope="col">Password</th>
+            <th scope="col">Description</th>
+            <th scope="col">Current Usage</th>
+            <th scope="col"></th>
         </tr>
         </thead>
         <tbody>
         <tr th:each="thisEmail : ${emailsList}">
             <td th:text="${thisEmail.email}"></td>
             <td th:text="${thisEmail.password}"></td>
+            <td th:text="${thisEmail.description}"></td>
+            <td><div class="dropdown">
+                <button class="dropbtn">Dropdown</button>
+                <div class="dropdown-content">
+                    <a href="facebook.com">FaceBook</a>
+                    <a href="https://www.instagram.com">Instagram</a>
+                    <a href="#">Netflix</a>
+                    <a href="#">Blizzard</a>
+                </div>
+            </div></td>
         </tr>
         </tbody>
     </table>
@@ -47,17 +99,24 @@
         <fieldset>
             <legend>New Email</legend>
             <div class="form-group">
-                <label for="name" class="col-lg-2 control-label">Email</label>
+                <label for="email" class="col-lg-2 control-label">Email</label>
                 <div class="col-lg-10">
                     <input type="text" autofocus="autofocus" name="email" title="Email" class="form-control"
-                           id="name"/>
+                           id="email"/>
                 </div>
             </div>
             <div class="form-group">
-                <label for="number" class="col-lg-2 control-label">Password</label>
+                <label for="password" class="col-lg-2 control-label">Password</label>
                 <div class="col-lg-10">
                     <input type="text" autofocus="autofocus" name="password" title="Password" class="form-control"
-                           id="number"/>
+                           id="password"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="description" class="col-lg-2 control-label">Description</label>
+                <div class="col-lg-10">
+                    <input type="text" autofocus="autofocus" name="description" title="Description" class="form-control"
+                           id="description"/>
                 </div>
             </div>
             <div class="form-group">
