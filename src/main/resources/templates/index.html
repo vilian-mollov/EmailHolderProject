@@ -2,7 +2,7 @@
 <html xmlns:th="http://thymeleaf.org">
 
 <head>
-    <title>Phonebook</title>
+    <title>EmailHolder</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link th:href="@{css/bootstrap.css}" rel="stylesheet"/>
@@ -20,43 +20,43 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" th:href="@{/}">Phonebook</a>
+            <a class="navbar-brand" th:href="@{/}">Email Holder</a>
         </div>
     </div>
 </nav>
 
 
 <div class="container">
-    <legend>All Contacts</legend>
+    <legend>All Emails</legend>
     <table class="table">
         <thead>
         <tr>
-            <th scope="col">Name</th>
-            <th scope="col">Number</th>
+            <th scope="col">Email</th>
+            <th scope="col">Passwords</th>
         </tr>
         </thead>
         <tbody>
-        <tr th:each="contact : ${contacts}">
-            <td th:text="${contact.name}"></td>
-            <td th:text="${contact.number}"></td>
+        <tr th:each="thisEmail : ${emailsList}">
+            <td th:text="${thisEmail.email}"></td>
+            <td th:text="${thisEmail.password}"></td>
         </tr>
         </tbody>
     </table>
 
     <form class="form-horizontal" th:method="POST">
         <fieldset>
-            <legend>New Contact</legend>
+            <legend>New Email</legend>
             <div class="form-group">
-                <label for="name" class="col-lg-2 control-label">Name</label>
+                <label for="name" class="col-lg-2 control-label">Email</label>
                 <div class="col-lg-10">
-                    <input type="text" autofocus="autofocus" name="name" title="Name" class="form-control"
+                    <input type="text" autofocus="autofocus" name="email" title="Email" class="form-control"
                            id="name"/>
                 </div>
             </div>
             <div class="form-group">
-                <label for="number" class="col-lg-2 control-label">Number</label>
+                <label for="number" class="col-lg-2 control-label">Password</label>
                 <div class="col-lg-10">
-                    <input type="text" autofocus="autofocus" name="number" title="Number" class="form-control"
+                    <input type="text" autofocus="autofocus" name="password" title="Password" class="form-control"
                            id="number"/>
                 </div>
             </div>
@@ -71,7 +71,7 @@
     <hr/>
 
     <footer>
-        <p>&copy; Software University</p>
+        <p>&copy; Vilian Mollov</p>
     </footer>
 </div>
 
