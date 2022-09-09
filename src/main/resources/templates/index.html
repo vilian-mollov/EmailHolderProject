@@ -10,10 +10,12 @@
     <style>
         .dropbtn {
             background-color: #e95420;
+            width: 160px;
             color: white;
-            padding: 16px;
-            font-size: 16px;
+            padding: 5px;
+            font-size: 15px;
             border: none;
+            border-radius: 10px;
         }
 
         .dropdown {
@@ -26,7 +28,7 @@
             position: absolute;
             background-color: #f1f1f1;
             min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             z-index: 1;
         }
 
@@ -37,11 +39,17 @@
             display: block;
         }
 
-        .dropdown-content a:hover {background-color: #ddd;}
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
 
-        .dropdown:hover .dropdown-content {display: block;}
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
 
-        .dropdown:hover .dropbtn {background-color: #555555;}
+        .dropdown:hover .dropbtn {
+            background-color: #555555;
+        }
     </style>
 
 
@@ -67,6 +75,7 @@
 
 <div class="container">
     <legend>All Emails</legend>
+
     <table class="table">
         <thead>
         <tr>
@@ -82,18 +91,21 @@
             <td th:text="${thisEmail.email}"></td>
             <td th:text="${thisEmail.password}"></td>
             <td th:text="${thisEmail.description}"></td>
-            <td><div class="dropdown">
-                <button class="dropbtn">Dropdown</button>
-                <div class="dropdown-content">
-                    <a href="facebook.com">FaceBook</a>
-                    <a href="https://www.instagram.com">Instagram</a>
-                    <a href="#">Netflix</a>
-                    <a href="#">Blizzard</a>
+            <td>
+                <div class="dropdown">
+                    <button class="dropbtn">Sites</button>
+                    <div class="dropdown-content">
+                        <a href="https://www.facebook.com">FaceBook</a>
+                        <a href="https://www.instagram.com">Instagram</a>
+                        <a href="https://www.netflix.com/">Netflix</a>
+                        <a href="https://www.blizzard.com/">Blizzard</a>
+                    </div>
                 </div>
-            </div></td>
+            </td>
         </tr>
         </tbody>
     </table>
+
 
     <form class="form-horizontal" th:method="POST">
         <fieldset>
@@ -129,9 +141,12 @@
 
     <hr/>
 
+
     <footer>
         <p>&copy; Vilian Mollov</p>
     </footer>
+
+
 </div>
 
 </body>

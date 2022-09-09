@@ -29,6 +29,9 @@ public class Email {
     }
 
     public List<String> getListOfSitesUsed() {
+        this.listOfSitesUsed.add("FaceBook");
+        this.listOfSitesUsed.add("FaceBook");
+        this.listOfSitesUsed.add("FaceBook");
         return listOfSitesUsed;
     }
 
