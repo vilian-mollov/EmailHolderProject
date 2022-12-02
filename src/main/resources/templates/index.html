@@ -83,6 +83,7 @@
             <th scope="col">Password</th>
             <th scope="col">Description</th>
             <th scope="col">Current Usage</th>
+            <th scope="col">Sites</th>
             <th scope="col"></th>
         </tr>
         </thead>
@@ -91,6 +92,9 @@
             <td th:text="${thisEmail.email}"></td>
             <td th:text="${thisEmail.password}"></td>
             <td th:text="${thisEmail.description}"></td>
+            <td th:each="site : ${thisEmail.getEmail()}">
+            <td th:text="${site}"></td>
+        </td>
             <td>
                 <div class="dropdown">
                     <button class="dropbtn">Sites</button>
@@ -129,6 +133,13 @@
                 <div class="col-lg-10">
                     <input type="text" autofocus="autofocus" name="description" title="Description" class="form-control"
                            id="description"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="sites" class="col-lg-2 control-label">Sites</label>
+                <div class="col-lg-10">
+                    <input type="text" autofocus="autofocus" name="sites" title="Sites" class="form-control"
+                           id="sites"/>
                 </div>
             </div>
             <div class="form-group">

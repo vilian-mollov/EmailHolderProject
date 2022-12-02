@@ -1,5 +1,6 @@
 package EmailHolder.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Email {
@@ -10,6 +11,10 @@ public class Email {
     List<String> listOfSitesUsed;
 
     public Email() {
+        listOfSitesUsed = new ArrayList<>();
+        email = "";
+        password = "";
+        description = "";
     }
 
     public String getEmail() {
